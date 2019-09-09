@@ -1,0 +1,1 @@
+xmlstarlet sel -t -m '//port/state[@state="open"]/parent::port' -v 'ancestor::host/address/@addr' -o : -v './@portid' -n final.xml | awk -F ':' 'BEGIN { OFS=FS } $1 in ports { ports[$1] = ports[$1] "," $2; next } { ports[$1] = $2 } END { for (ip in ports) print ip, ports[ip] }'

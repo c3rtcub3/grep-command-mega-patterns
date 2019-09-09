@@ -1,0 +1,19 @@
+for zq in $(ls `pwd`/*.*); do cat `pwd`/"$zq" | printf "\nip:" && echo "$zq" && grep -e "(NOT ok)" `pwd`/"$zq" ; done
+
+for zq in $(ls `pwd`/); do cat `pwd`/"$zq" | printf "\nip:" && echo "$zq" && grep -e "RC4" `pwd`/"$zq" ; done
+
+
+
+
+for zq in $(ls `pwd`/); do cat `pwd`/"$zq" | printf "\nip:" && echo "$zq" && grep RC4\|http-server-header `pwd`/"$zq" ; done
+ 
+ 
+ 
+ 
+ 
+ 
+for zq in $(ls `pwd`/*.*); do cat `pwd`/"$zq" | printf "\nip:" && echo "$zq" && grep -e "Account active               No" `pwd`/"$zq" ; done
+
+
+
+for zq in $(cat no.txt); do cat "$zq" | printf "\nip:" && echo "$zq" && grep -e "Account active               No" `pwd`/"$zq" ; done
